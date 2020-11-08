@@ -3,9 +3,13 @@ package com.springtest.projectspringone.model;
 import java.util.UUID;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import javax.validation.constraints.NotBlank;
+
+
 public class Person {
 
     private final UUID id;
+    @NotBlank(message="Person is mandatory")
     private final String name;
 
     public Person(@JsonProperty("id") UUID id, 
