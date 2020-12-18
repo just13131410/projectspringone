@@ -6,7 +6,9 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.3.0.RELEASE</version>
+		
 		<relativePath/> <!-- lookup parent from repository -->
+		
 	</parent>
 	<groupId>net.javaguides</groupId>
 	<artifactId>springboot-backend</artifactId>
@@ -68,5 +70,24 @@
 		</plugins>
 		<finalName>springboot-backend</finalName>
 	</build>
+	<profiles>
+
+        <profile>
+            <id>dev</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <activatedProperties>dev</activatedProperties>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>test</id>
+            <properties>
+                <activatedProperties>test</activatedProperties>
+            </properties>
+        </profile>
+    </profiles>
 
 </project>
