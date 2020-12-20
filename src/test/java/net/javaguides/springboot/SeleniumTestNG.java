@@ -26,7 +26,7 @@ public class SeleniumTestNG {
         Thread.sleep(1000);
         driver.findElement(By.id("saveButton")).click();
 
-        Thread.sleep(5000);
+        Thread.sleep(5500);
         driver.quit();
     }
     
